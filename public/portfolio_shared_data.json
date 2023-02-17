@@ -1,0 +1,70 @@
+{
+    "basic_info": {
+        "name": "Gaurav Kumar Sah",
+        "title": "Front-end/Back-end Developer",
+        "description": "I am a Front-end/Back-end Developer with 2+ years of experience in developing web applications. I have worked on various projects using different technologies and frameworks. I am a quick learner and always ready to learn new technologies. I am a team player and always ready to help my team members.",
+        "social": [
+          {
+            "name": "github",
+            "url": "https://github.com/gauravsahdz",
+            "class": "fab fa-github"
+          },
+          {
+            "name": "instagram",
+            "url": "https://www.instagram.com/gauravsahdz/",
+            "class": "fab fa-instagram"
+          }
+        ],
+        "image": "myProfile.jpg"
+    },
+    "skills": {
+      "icons": [
+          {
+            "name": "C",
+            "class": "devicon-c-plain",
+            "level": "95"
+          },
+          {
+            "name": "C++",
+            "class": "devicon-cplusplus-plain",
+            "level": "95"
+          },
+          {
+            "name": "JAVA",
+            "class": "devicon-java-plain",
+            "level": "85"
+          },
+          {
+            "name": "JavaScript",
+            "class": "devicon-javascript-plain",
+            "level": "70"
+          },
+          {
+            "name": "Angular",
+            "class": "devicon-angularjs-plain",
+            "level": "80"
+          },
+          {
+            "name": "React",
+            "class": "devicon-react-plain",
+            "level": "90"
+          },
+          
+          {
+            "name": "NodeJS",
+            "class": "devicon-nodejs-plain",
+            "level": "65"
+          },
+          {
+            "name": "MongoDB",
+            "class": "devicon-mongodb-plain",
+            "level": "60"
+          },
+          {
+            "name": "Jenkins",
+            "class": "devicon-jenkins-plain",
+            "level": "75"
+          }
+      ]
+    }
+  }
