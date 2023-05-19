@@ -54,7 +54,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
                         <li className={`nav-item ${activeItem === 'Home' ? 'active' : ''}`}>
-                            <a className="nav-link" aria-current="page" href="#" onClick={() => handleClick('Home')}
+                            <a className="nav-link" aria-current="page" href="#home" onClick={() => handleClick('Home')}
                                 style={{ color: activeItem === 'Home' ? 'white' : '' }}
                             >
                                 Home
@@ -113,7 +113,6 @@ const Navbar = () => {
                             <a
                                 href="https://drive.google.com/file/d/1gdr37WDYIMD6aMle0L9VjGx4XPpKqVAw/view?usp=sharing"
                                 target="_blank"
-        
                                 rel="noopener noreferrer"
                             >
                                 <button className="resume-btn">Resume</button>

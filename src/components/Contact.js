@@ -13,6 +13,20 @@ class Contact extends Component {
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
+            //if any of the fields are empty, alert the user to fill out all fields
+            if (!from_name || !from_email || !subject || !message) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            const email_reg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,})$/;
+
+            //if email is not valid, alert the user to enter a valid email
+            if (!email_reg.test(from_email)) {
+                alert('Please enter a valid email.');
+                return;
+            }
+
             var templateParams = {
                 from_name: from_name,
                 from_email: from_email,
@@ -90,7 +104,7 @@ class Contact extends Component {
                         </form>
 
                         <div className="text-center text-md-left">
-                            <a className="btn btn-primary" onClick={sendEmail}>Send</a>
+                            <button className="btn btn-primary" onClick={sendEmail}>Send</button>
                         </div>
                         <div className="status"></div>
                     </div>
