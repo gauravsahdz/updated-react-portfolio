@@ -45,6 +45,7 @@ class Header extends Component {
                 <Typical steps={[name]} wrapper="p" />
               </h1>
               <Typical className="title-styles" steps={[title]} wrapper="p" />
+
               <Switch
                 checked={this.state.checked}
                 onChange={this.onThemeSwitchChange}
@@ -85,7 +86,9 @@ class Header extends Component {
                 }
                 id="icon-switch"
               />
+
             </div>
+
           </div>
         </div>
       </header>

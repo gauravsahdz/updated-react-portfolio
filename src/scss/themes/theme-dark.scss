@@ -1,107 +1,160 @@
-body[data-theme="dark"] {  
+body[data-theme="dark"] {
+  @import "../dark-slider.scss";
 
-   @import '../dark-slider.scss';
+  .slider-tab {
+    background-color: #8c8c8c;
+  }
 
-   .slider-tab {
-      background-color: #8C8C8C;
-   }
+  .title-styles {
+    color: white;
+  }
 
-   .title-styles {
+  .header-icon {
+    color: #3c342c;
+    opacity: 0.8;
+  }
+
+  .slider-image {
+    border: 5px solid #8c8c8c;
+  }
+
+  .language {
+    background-color: #494949;
+  }
+
+  .link-href {
+    color: white;
+  }
+
+  .project-date {
+    background-color: #918e97;
+    color: white;
+  }
+
+  header {
+    background-color: #494949;
+    h1 {
       color: white;
-   }
+    }
+  }
 
-   .header-icon {
-      color: #3C342C;
-      opacity: 0.8;
-   }
+  .navbar {
+    background-color: #494949 !important;
+  }
 
-   .slider-image {
-      border: 5px solid #8C8C8C;
-   }
+  .resume-btn {
+    background-color: #494949;
+    color: white;
+    border: 1px solid white;
 
-   .language {
+    &:hover {
       background-color: #494949;
-   }
-
-   .link-href {
       color: white;
-   }
+    }
+  }
 
-   .project-date {
-      background-color: #918e97;
+  #about {
+    background-color: #7f7f7f;
+    h1 span {
       color: white;
-   }
+    }
+    .polaroid span {
+      background: #6d6d6d;
+    }
+    .card {
+      background: #6d6d6d;
+      color: white;
+    }
+  }
 
-   header {
-      background-color: #494949;
-      h1 {
-         color: white;
-      }
-   }
+  #service {
+    background-color: #7f7f7f;
+    .section-title {
+      color: white !important;
+    }
+    .foto div {
+      background: #6d6d6d;
+    }
+    .service-title-settings {
+      color: white;
+    }
+    .service-desc {
+      color: white;
+    }
+  }
 
-   #about {
-      background-color: #7f7f7f;
-      h1 span {
-         color: white;
-      }
-      .polaroid span {
-         background:  #6d6d6d;
-      }
-      .card {
-         background: #6d6d6d;
-         color: white;
-      }
-   }
+  #testimonial {
+    background: #5b5b5b;
+  }
 
-   #portfolio {
-      background: #5b5b5b;
-      .section-title {
-         color: white !important;
-      }
-      .foto div {
-         background: #6d6d6d;
-      }
-      .project-title-settings {
-         color: white;
-      }
-   }
+  #portfolio {
+    background: #5b5b5b;
+    .section-title {
+      color: white !important;
+    }
+    .foto div {
+      background: #6d6d6d;
+    }
+    .project-title-settings {
+      color: white;
+    }
+  }
 
-   #resume {
-      filter: brightness(80%);
-      background: #5b5b5b;
-      .section-title {
-         color: white !important;
-      }
+  #contactForm {
+    background: #494949;
+    label {
+      color: rgba(244, 239, 239, 0.641) !important;
+    }
+    #name,
+    #email,
+    #message,
+    #subject {
+      color: white;
+      background: #6d6d6d;
+    }
+  }
 
-      .experience-badge {
-         background: #919191 !important;
-         color: white;
-      }
+  .condet .contact-detail,
+  i {
+    color: white;
+  }
 
-      .main-badge {
-         background: #919191 !important;
-      }
+  #resume {
+    filter: brightness(80%);
+    background: #5b5b5b;
+    .section-title {
+      color: white !important;
+    }
 
+    .experience-badge {
+      background: #919191 !important;
+      color: white;
+    }
+
+    .main-badge {
+      background: #919191 !important;
+    }
+
+    .vertical-timeline-element-date {
+      color: white;
+    }
+
+    .vertical-timeline-element-icon {
+      background: #919191 !important;
+    }
+    @media only screen and (max-width: 1169px) {
       .vertical-timeline-element-date {
-         color: white;
+        color: black;
       }
+    }
+  }
 
-      .vertical-timeline-element-icon {
-         background: #919191 !important;
-      }
-      @media only screen and (max-width: 1169px) { 
-         .vertical-timeline-element-date {
-            color: black;
-         }
-      }
-   }
+  .modal-inside .modal-content {
+    background: #5b5b5b;
+    color: white;
+  }
 
-   .modal-inside .modal-content {
-      background: #5b5b5b;
-      color: white;
-   }
-
-   .close-icon {
-      color: white;
-   }
+  .close-icon {
+    color: white;
+  }
 }

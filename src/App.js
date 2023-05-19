@@ -1,12 +1,21 @@
 import $ from 'jquery';
 import React, { Component } from 'react';
 import './App.scss';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
 import About from './components/About';
 import Experience from './components/Experience';
-import Footer from './components/Footer';
-import Header from './components/Header';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Services from './components/Services';
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Whatsapp from './components/whatsapp';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
 
 class App extends Component {
   constructor(props) {
@@ -81,6 +90,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Navbar />
+        <Whatsapp/>
         <Header sharedData={this.state.sharedData.basic_info} />
         <div className="col-md-12 mx-auto text-center language">
           <div
@@ -128,10 +139,19 @@ class App extends Component {
           sharedSkills={this.state.sharedData.skills}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
+        <Services
+          resumeServices={this.state.resumeData.services}
+          resumeBasicInfo={this.state.resumeData.basic_info}
+        />
         <Experience
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
+        <Testimonials
+          resumeTestimonials={this.state.resumeData.testimonials}
+          resumeBasicInfo={this.state.resumeData.basic_info}
+        />
+        <Contact />
         <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
       </div>
     );

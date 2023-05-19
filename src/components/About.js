@@ -1,5 +1,6 @@
 import angularIcon from '@iconify/icons-logos/angular-icon';
 import reactIcon from '@iconify/icons-logos/react';
+import nodeIcon from '@iconify/icons-logos/nodejs-icon';
 import { Icon } from '@iconify/react';
 import React, { Component } from 'react';
 
@@ -35,6 +36,10 @@ class About extends Component {
                   />
                   <Icon
                     icon={reactIcon}
+                    style={{ fontSize: '400%', margin: '9% 5% 0 5%' }}
+                  />
+                  <Icon
+                    icon={nodeIcon}
                     style={{ fontSize: '400%', margin: '9% 5% 0 5%' }}
                   />
                 </span>
