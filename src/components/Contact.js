@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
+import * as EmailValidator from 'email-validator';
 
 class Contact extends Component {
 
@@ -19,13 +20,13 @@ class Contact extends Component {
                 return;
             }
 
-            const email_reg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,})$/;
-
-            //if email is not valid, alert the user to enter a valid email
-            if (!email_reg.test(from_email)) {
+            //if the email is not valid, alert the user to enter a valid email
+            if (!EmailValidator.validate(from_email)) {
                 alert('Please enter a valid email.');
                 return;
             }
+
+            
 
             var templateParams = {
                 from_name: from_name,
