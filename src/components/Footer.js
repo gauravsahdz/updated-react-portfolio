@@ -1,13 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      about: {},
+    };
+  }
+
   render() {
-    if (this.props.sharedBasicInfo) {
-      var networks = this.props.sharedBasicInfo.social.map(function (network) {
+    const about = this.props.about[0];
+    if (about) {
+      var networks = about.social.map(function (network) {
         return (
-          <span key={network.name} className="m-4">
-            <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <i className={network.class}></i>
+          <span key={network.title} className="m-4">
+            <a href={network.link} target="_blank" rel="noopener noreferrer">
+              <i className={`fab fa-${network.title.toLowerCase()}`}></i>
             </a>
           </span>
         );
@@ -21,12 +29,7 @@ class Footer extends Component {
 
           <div className="copyright py-4 text-center">
             <div className="container">
-              <small>
-                Copyright &copy;{' '}
-                {this.props.sharedBasicInfo
-                  ? this.props.sharedBasicInfo.name
-                  : '???'}
-              </small>
+              <small>Copyright &copy; {about ? about.name : "???"}</small>
             </div>
           </div>
         </div>
