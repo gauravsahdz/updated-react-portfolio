@@ -1,26 +1,40 @@
-import React, { Component } from 'react';
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/custom-animations/scale-out-animation.css';
-import { Modal } from 'react-bootstrap';
-import AwesomeSliderStyles2 from '../scss/dark-slider.scss';
-import AwesomeSliderStyles from '../scss/light-slider.scss';
+import React, { Component } from "react";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
+import { Modal } from "react-bootstrap";
+import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
+import AwesomeSliderStyles from "../scss/light-slider.scss";
+
+import imageUrlBuilder from "@sanity/image-url";
+import client from "../client";
+
+const builder = imageUrlBuilder(client);
+
+function urlFor(source) {
+  return builder.image(source);
+}
+
 class ProjectDetailsModal extends Component {
   render() {
     if (this.props.data) {
+      console.log(this.props.data);
       const technologies = this.props.data.technologies;
       const images = this.props.data.images;
       var title = this.props.data.title;
       var description = this.props.data.description;
-      var url = this.props.data.url;
+      var url = this.props.data.link;
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
           return (
             <li className="list-inline-item mx-3" key={i}>
               <span>
                 <div className="text-center">
-                  <i className={icons.class} style={{ fontSize: '300%' }}>
-                    <p className="text-center" style={{ fontSize: '30%' }}>
-                      {icons.name}
+                  <i
+                    className={`fab fa-${icons.icon.toLowerCase()}`}
+                    style={{ fontSize: "300%" }}
+                  >
+                    <p className="text-center" style={{ fontSize: "30%" }}>
+                      {icons.title}
                     </p>
                   </i>
                 </div>
@@ -30,7 +44,13 @@ class ProjectDetailsModal extends Component {
         });
         if (this.props.data.images) {
           var img = images.map((elem, i) => {
-            return <div key={i} data-src={elem} />;
+            return (
+              <div key={i}>
+                <img src={urlFor(elem).url()} alt="project" 
+                style={{ width: "100%", height: "100%" }}
+                />;
+              </div>
+            );
           });
         }
       }
@@ -47,21 +67,21 @@ class ProjectDetailsModal extends Component {
           <i className="fas fa-times fa-3x close-icon"></i>
         </span>
         <div className="col-md-12">
-          <div className="col-md-10 mx-auto" style={{ paddingBottom: '50px' }}>
+          <div className="col-md-10 mx-auto" style={{ paddingBottom: "50px" }}>
             <div className="slider-tab">
               <span
                 className="iconify slider-iconfiy"
                 data-icon="emojione:red-circle"
                 data-inline="false"
-                style={{ marginLeft: '5px' }}
-              ></span>{' '}
-              &nbsp;{' '}
+                style={{ marginLeft: "5px" }}
+              ></span>{" "}
+              &nbsp;{" "}
               <span
                 className="iconify slider-iconfiy"
                 data-icon="twemoji:yellow-circle"
                 data-inline="false"
-              ></span>{' '}
-              &nbsp;{' '}
+              ></span>{" "}
+              &nbsp;{" "}
               <span
                 className="iconify slider-iconfiy"
                 data-icon="twemoji:green-circle"
@@ -77,7 +97,7 @@ class ProjectDetailsModal extends Component {
             </AwesomeSlider>
           </div>
           <div className="col-md-10 mx-auto">
-            <h3 style={{ padding: '5px 5px 0 5px' }}>
+            <h3 style={{ padding: "5px 5px 0 5px" }}>
               {title}
               {url ? (
                 <a
@@ -88,7 +108,7 @@ class ProjectDetailsModal extends Component {
                 >
                   <i
                     className="fas fa-external-link-alt"
-                    style={{ marginLeft: '10px' }}
+                    style={{ marginLeft: "10px" }}
                   ></i>
                 </a>
               ) : null}
