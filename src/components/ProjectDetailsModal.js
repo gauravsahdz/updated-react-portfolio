@@ -23,6 +23,7 @@ class ProjectDetailsModal extends Component {
       var title = this.props.data.title;
       var description = this.props.data.description;
       var url = this.props.data.link;
+      var gitUrl = this.props.data.githubRepoLink;
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
           return (
@@ -46,9 +47,12 @@ class ProjectDetailsModal extends Component {
           var img = images.map((elem, i) => {
             return (
               <div key={i}>
-                <img src={urlFor(elem).url()} alt="project" 
-                style={{ width: "100%", height: "100%" }}
-                />;
+                <img
+                  src={urlFor(elem).url()}
+                  alt="project"
+                  style={{ width: "100%", height: "100%" }}
+                />
+                ;
               </div>
             );
           });
@@ -109,7 +113,22 @@ class ProjectDetailsModal extends Component {
                   <i
                     className="fas fa-external-link-alt"
                     style={{ marginLeft: "10px" }}
+                    title="Live Demo"
                   ></i>
+                </a>
+              ) : null}
+              {gitUrl ? (
+                <a
+                  href={gitUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-href"
+                >
+                  <i
+                    className="fas fa-code-branch"
+                    style={{ marginLeft: "10px" }}
+                    title="Github Repo"
+                  />
                 </a>
               ) : null}
             </h3>

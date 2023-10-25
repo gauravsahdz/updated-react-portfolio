@@ -42,6 +42,10 @@ body[data-theme="dark"] {
     background-color: #494949 !important;
   }
 
+  .navbar-brand{
+    color: white !important;
+  }
+
   .resume-btn {
     background-color: #494949;
     color: white;
@@ -101,7 +105,7 @@ body[data-theme="dark"] {
   }
 
   #contactForm {
-    background: #494949;
+    background: #5b5b5b;
     label {
       color: rgba(244, 239, 239, 0.641) !important;
     }
@@ -109,8 +113,8 @@ body[data-theme="dark"] {
     #email,
     #message,
     #subject {
-      color: white;
-      background: #6d6d6d;
+      color: #6d6d6d;
+      background: white;
     }
   }
 
