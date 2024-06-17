@@ -103,20 +103,6 @@ const Navbar = ({ about }) => {
             </li>
             <li
               className={`nav-item ${
-                activeItem === "Services" ? "active" : ""
-              }`}
-            >
-              <a
-                className="nav-link"
-                href="#service"
-                onClick={() => handleClick("Services")}
-                style={{ color: activeItem === "Services" ? "white" : "" }}
-              >
-                Services
-              </a>
-            </li>
-            <li
-              className={`nav-item ${
                 activeItem === "Experience" ? "active" : ""
               }`}
             >
@@ -127,20 +113,6 @@ const Navbar = ({ about }) => {
                 style={{ color: activeItem === "Experience" ? "white" : "" }}
               >
                 Experience
-              </a>
-            </li>
-            <li
-              className={`nav-item ${
-                activeItem === "Testimonials" ? "active" : ""
-              }`}
-            >
-              <a
-                className="nav-link"
-                href="#testimonial"
-                onClick={() => handleClick("Testimonials")}
-                style={{ color: activeItem === "Testimonials" ? "white" : "" }}
-              >
-                Testimonials
               </a>
             </li>
             <li

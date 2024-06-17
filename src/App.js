@@ -89,12 +89,20 @@ class App extends Component {
                 ></span>
               </div>
             </div>
-            <About about={this.state.about} />
-            <Projects projects={this.state.projects} />
-            <Skills skill={this.state.skill} />
-            <Services services={this.state.services} />
-            <Experience experiences={this.state.experiences} />
-            <Testimonials testimonials={this.state.testimonials} />
+            {this.state.about.length > 0 && <About about={this.state.about} />}
+            {this.state.projects.length > 0 && (
+              <Projects projects={this.state.projects} />
+            )}
+            {this.state.skill.length > 0 && <Skills skill={this.state.skill} />}
+            {this.state.services.length > 0 && (
+              <Services services={this.state.services} />
+            )}
+            {this.state.experiences.length > 0 && (
+              <Experience experiences={this.state.experiences} />
+            )}
+            {this.state.testimonials.length > 0 && (
+              <Testimonials testimonials={this.state.testimonials} />
+            )}
             <Contact about={this.state.about} />
             <Footer about={this.state.about} />
           </div>
